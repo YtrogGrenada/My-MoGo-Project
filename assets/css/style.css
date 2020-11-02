@@ -522,12 +522,18 @@ hr {
 .wedo {
     display: flex;
     margin: 0 -5px;
+    flex-wrap: wrap;
 }
 
 .wedo_item {
     flex: 1 1 0;
     height: auto;
-    margin: 0 5px;
+    margin: 10px 5px 0 auto;
+}
+
+.wedo_img {
+    margin: 0 auto;
+    display: block;
 }
 
 
@@ -673,6 +679,22 @@ hr {
 
 .barbershops {
     background-color: #f8f8f8;
+}
+
+.barbershops_logo img {
+    display: block;
+    margin: 0 auto;
+    width: 112px;
+    height: 122px;
+}
+
+.barbershops_logo {
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 
@@ -878,7 +900,7 @@ hr {
     display: flex;
     width: 515px;
     height: 162px;
-    margin-right: 140px;
+    margin: auto;
     margin-bottom: 80px;
 }
 
@@ -934,12 +956,13 @@ hr {
 .blog {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 117px;
+    flex-wrap: wrap;
 }
 
 .blog_item {
     width: 382px;
     height: 385px;
+    margin: 30px auto;
 }
 
 .blog_image {
@@ -977,7 +1000,6 @@ hr {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    weight: 223px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -1077,19 +1099,27 @@ hr {
 
 .footer {
     display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .footer_item {
-    width: 462px;
     display: flex;
     flex-direction: column;
     align-self: center;
-    justify-content: space-between;
-    height: 400px;
+    align-items: stretch;
+    justify-content: center;
+    margin: 20px auto 0;
 }
 
 .footer_item.second {
-    margin: 0 85px 0 30px;
+    width: 350px;
+    margin-top: 20px;
+}
+
+.footer_item.first {
+    width: 350px;
 }
 
 .footer_logo {
@@ -1178,7 +1208,6 @@ hr {
     font-family: 'Montserrat', serif;
     font-weight: bold;
     margin-top: 15px;
-    height: 71px;
 }
 
 .footer_image {
@@ -1192,9 +1221,11 @@ hr {
 }
 
 .footer_blog {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: stretch;
     height: 320px;
 }
 
@@ -1206,9 +1237,10 @@ hr {
 }
 
 .footer_info {
-    margin-left: 20px;
+    margin-left: 10px;
     align-self: center;
-    width: 200px;
+    width: 180px;
+    line-height: 2em
 }
 
 .footer_main {
@@ -1222,4 +1254,21 @@ hr {
 .footer_date {
     margin-top: 12px;
     font-family: 'Roboto Light Italic', serif;
+}
+
+.footer_bars {
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+    grid-template-rows: repeat(2, 88px);
+    grid-gap: 0.2em;
+}
+
+.footer_photos {
+    text-decoration: none;
+    font-size: 13px;
+    font-family: "Roboto Light Italic", serif;
+    color: #333333;
 }
